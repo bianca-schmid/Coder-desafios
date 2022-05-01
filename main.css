@@ -1,0 +1,306 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*estilos generales*/
+.principal{
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 20px;
+    color: white;
+    background-color: black;
+
+    display: grid;
+    grid-template-areas:
+    "nav"
+    "header"
+    "main"
+    "footer"
+    ;
+}
+
+/*estilo del header*/
+header{
+    grid-area: header;
+
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+header img{
+    width: 100%;
+}
+
+/*estilos del menu de navegacion*/
+nav{
+    grid-area: nav;
+
+    background-color: black;
+    
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    align-items: center;
+
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    margin: 0px;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+nav ul li{
+    display: inline-block;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 27px;
+    
+}
+
+nav ul li a:hover{
+    background-color: #DF3447;
+}
+
+
+
+/*configuracion del boton de menu responsive*/
+.checkbtn{
+    font-size: 30px;
+    color: #DF3447;
+    float: left;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+
+
+
+/*estilos del contenido de la pagina*/
+main{
+    grid-area: main;
+    
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/*estilos del footer*/
+footer{
+    grid-area: footer;
+
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content:stretch;
+
+}
+
+/* Centralizacion de texto de las paginas*/
+.texto{
+    text-align: center;
+    padding: 30px;
+}
+
+
+/*Formularios*/
+.content{
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.8em;
+}
+
+.contact-wrapper{
+    box-shadow: 0 0 20px 0 #DF3447;
+}
+
+.contact-wrapper > * {
+    padding: 1em;
+}
+
+.contact-form form{
+    margin: 0;
+    padding: 1em;
+}
+
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea{
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background: none;
+    outline: 0;
+    color: white;
+    border-bottom: 1px solid #DF3447;
+}
+
+.contact-form form button{
+    background: #DF3447;
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+
+/*ajustes de la tabla*/
+.conteiner-tabla{
+    width: 100%;
+    margin: auto;
+    max-width: 1000px;
+}
+
+.tabla-cuerpo{
+    text-align: center;
+    width: 100%;
+    border: 3px solid #DF3447;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    table-layout: fixed;
+}
+
+.tabla-cuerpo caption{
+    font-size: 28px;
+    text-transform: uppercase;
+    margin: 8px 0;
+}
+
+.tabla-cuerpo tr{
+    color: white;
+    background-color: black;
+    border: 2px solid #DF3447;
+}
+
+.tabla-cuerpo th, .tabla-cuerpo td{
+    padding: 8px;
+    text-align: center;
+}
+
+.tabla-cuerpo thead th{
+    text-transform: uppercase;
+    background-color: #DF3447;
+}
+
+.tabla-cuerpo tbody tr:hover{
+    background-color: #DF3447;
+}
+
+.tabla-cuerpo tbody td:hover{
+    background-color: black;
+}
+
+.table-title{
+    
+    text-align: center;
+    padding: 10px;
+}
+
+/*responsive tabla de horarios*/
+@media screen and (max-width: 600px){
+    .tabla-cuerpo{
+        border: 0;
+
+    }
+    .tabla-cuerpo thead{
+        display: none;
+    }
+    .tabla-cuerpo tr{
+        margin-bottom: 8px;
+        border-bottom: 4px solid #DF3447;
+        display: block;
+    }
+    .tabla-cuerpo td{
+        display: block;
+    }
+
+}
+
+
+
+/*responsive menu navegacion*/
+@media (max-width: 952px){
+    .enlace{
+        padding-left: 20px;
+    }
+
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #DF3447;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a{
+        font-size: 20px;
+    }
+
+    li a:hover{
+        background: none;
+        color: black;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+
+
+
+@media (max-width: 600px){
+    main{
+        
+        display: block;
+        align-items: center;
+        justify-content: center;
+    
+    }
+    
+}
+
