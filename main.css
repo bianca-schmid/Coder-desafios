@@ -228,7 +228,7 @@ footer{
 
     }
     .tabla-cuerpo thead{
-        display: none;
+        display: block;
     }
     .tabla-cuerpo tr{
         margin-bottom: 8px;
