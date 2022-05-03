@@ -32,8 +32,12 @@ header{
 
 }
 
-header img{
-    width: 100%;
+.imagen{
+    text-align: center;
+}
+
+.home-text{
+    text-align: center;
 }
 
 /*estilos del menu de navegacion*/
@@ -76,6 +80,40 @@ nav ul li a{
 
 nav ul li a:hover{
     background-color: #DF3447;
+    color: white;
+}
+
+
+/* configuraciones de los cards de planes y precios*/
+.card-body{
+    background-color: #DF3447;
+    text-align: center;
+}
+
+.card-title{
+    font-size: 24px;
+}
+
+/*tamaño de los videos*/
+.video{
+    width: 600px;
+    height: 350px;
+}
+
+
+
+/*texto carousel*/
+.carousel-text{
+    font-size: 30px;
+}
+
+/*texto del home*/
+.home-text{
+    text-align: center;
+    box-shadow: 10px 0px 20px 20px #DF3447;
+    padding: 20px;
+    text-transform: uppercase;
+    
 }
 
 
@@ -168,14 +206,19 @@ footer{
 }
 
 
+.table-title{
+    text-align: center;
+}
+
+
 /*ajustes de la tabla*/
-.conteiner-tabla{
+.table-responsive{
     width: 100%;
     margin: auto;
     max-width: 1000px;
 }
 
-.tabla-cuerpo{
+.table{
     text-align: center;
     width: 100%;
     border: 3px solid #DF3447;
@@ -185,60 +228,39 @@ footer{
     table-layout: fixed;
 }
 
-.tabla-cuerpo caption{
+.table caption{
     font-size: 28px;
     text-transform: uppercase;
     margin: 8px 0;
 }
 
-.tabla-cuerpo tr{
+.table tr{
     color: white;
     background-color: black;
     border: 2px solid #DF3447;
 }
 
-.tabla-cuerpo th, .tabla-cuerpo td{
+.tableo th, .table td{
     padding: 8px;
     text-align: center;
 }
 
-.tabla-cuerpo thead th{
+.table thead th{
     text-transform: uppercase;
     background-color: #DF3447;
 }
 
-.tabla-cuerpo tbody tr:hover{
+.table tbody tr:hover{
     background-color: #DF3447;
 }
 
-.tabla-cuerpo tbody td:hover{
+.table tbody td:hover{
     background-color: black;
 }
 
-.table-title{
-    
+.table-responsive{
     text-align: center;
     padding: 10px;
-}
-
-/*responsive tabla de horarios*/
-@media screen and (max-width: 600px){
-    .tabla-cuerpo{
-        border: 0;
-
-    }
-    .tabla-cuerpo thead{
-        display: block;
-    }
-    .tabla-cuerpo tr{
-        margin-bottom: 8px;
-        border-bottom: 4px solid #DF3447;
-        display: block;
-    }
-    .tabla-cuerpo td{
-        display: block;
-    }
-
 }
 
 
@@ -303,4 +325,3 @@ footer{
     }
     
 }
-
