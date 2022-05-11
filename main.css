@@ -38,6 +38,7 @@ header{
 
 .home-text{
     text-align: center;
+    
 }
 
 /*estilos del menu de navegacion*/
@@ -50,6 +51,7 @@ nav{
     justify-content: space-between;
     height: 10vh;
     align-items: center;
+    z-index: 2;
 
 }
 
@@ -84,7 +86,12 @@ nav ul li a:hover{
 }
 
 
+
 /* configuraciones de los cards de planes y precios*/
+.card{
+    text-align: center;
+}
+
 .card-body{
     background-color: #DF3447;
     text-align: center;
@@ -94,10 +101,11 @@ nav ul li a:hover{
     font-size: 24px;
 }
 
-/*tamaño de los videos*/
-.video{
-    width: 600px;
-    height: 350px;
+
+/*configuracion de los titulos de wods del dia*/
+.title-wod{
+    text-align: center;
+    box-shadow: 10px 0px 20px 20px #DF3447;
 }
 
 
@@ -110,7 +118,7 @@ nav ul li a:hover{
 /*texto del home*/
 .home-text{
     text-align: center;
-    box-shadow: 10px 0px 20px 20px #DF3447;
+    box-shadow: 10px 0px 16px 16px #DF3447;
     padding: 20px;
     text-transform: uppercase;
     
@@ -268,7 +276,8 @@ footer{
 /*responsive menu navegacion*/
 @media (max-width: 952px){
     .enlace{
-        padding-left: 20px;
+        padding-right: 20px;
+        margin: 20px;
     }
 
     nav ul li a{
@@ -287,7 +296,7 @@ footer{
         width: 100%;
         height: 100vh;
         background: #DF3447;
-        top: 80px;
+        top: 120px;
         left: -100%;
         text-align: center;
         transition: all .5s;
@@ -295,7 +304,7 @@ footer{
 
     nav ul li{
         display: block;
-        margin: 50px 0;
+        margin: 10px 0;
         line-height: 30px;
     }
 
