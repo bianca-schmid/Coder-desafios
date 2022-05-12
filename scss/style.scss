@@ -1,3 +1,11 @@
+@import "home.scss";
+@import "wods.scss";
+
+/*Variables*/
+$color-principal: #DF3447;
+$color-secundario: white;
+$color-terciario: black;
+
 *{
     padding: 0;
     margin: 0;
@@ -8,8 +16,8 @@
 .principal{
     font-family: 'PT Sans Narrow', sans-serif;
     font-size: 20px;
-    color: white;
-    background-color: black;
+    color: $color-secundario;
+    background-color: $color-terciario;
 
     display: grid;
     grid-template-areas:
@@ -36,16 +44,13 @@ header{
     text-align: center;
 }
 
-.home-text{
-    text-align: center;
-    
-}
+
 
 /*estilos del menu de navegacion*/
 nav{
     grid-area: nav;
 
-    background-color: black;
+    background-color: $color-terciario;
     
     display: flex;
     justify-content: space-between;
@@ -53,38 +58,39 @@ nav{
     align-items: center;
     z-index: 2;
 
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        float: right;
+
+        li{
+            display: inline-block;
+
+            a{
+                color: $color-secundario;
+                text-decoration: none;
+                display: block;
+                padding: 27px;
+                
+            }
+
+            a:hover{
+                background-color: $color-principal;
+                color: $color-secundario;
+            }
+        }
+
+        
+    }
+
 }
 
 .logo{
     display: flex;
     align-items: center;
-    margin: 0px;
+    margin: 5px;
 }
-
-nav ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    float: right;
-}
-
-nav ul li{
-    display: inline-block;
-}
-
-nav ul li a{
-    color: white;
-    text-decoration: none;
-    display: block;
-    padding: 27px;
-    
-}
-
-nav ul li a:hover{
-    background-color: #DF3447;
-    color: white;
-}
-
 
 
 /* configuraciones de los cards de planes y precios*/
@@ -93,7 +99,7 @@ nav ul li a:hover{
 }
 
 .card-body{
-    background-color: #DF3447;
+    background-color: $color-principal;
     text-align: center;
 }
 
@@ -102,34 +108,10 @@ nav ul li a:hover{
 }
 
 
-/*configuracion de los titulos de wods del dia*/
-.title-wod{
-    text-align: center;
-    box-shadow: 10px 0px 20px 20px #DF3447;
-}
-
-
-
-/*texto carousel*/
-.carousel-text{
-    font-size: 30px;
-}
-
-/*texto del home*/
-.home-text{
-    text-align: center;
-    box-shadow: 10px 0px 16px 16px #DF3447;
-    padding: 20px;
-    text-transform: uppercase;
-    
-}
-
-
-
 /*configuracion del boton de menu responsive*/
 .checkbtn{
     font-size: 30px;
-    color: #DF3447;
+    color: $color-principal;
     float: left;
     line-height: 80px;
     margin-right: 40px;
@@ -140,7 +122,6 @@ nav ul li a:hover{
 #check{
     display: none;
 }
-
 
 
 
@@ -159,10 +140,10 @@ main{
 footer{
     grid-area: footer;
 
-    display: flex;
+    display: grid;
     flex-direction:column;
     align-items: center;
-    justify-content:stretch;
+    justify-content:center;
 
 }
 
@@ -172,8 +153,13 @@ footer{
     padding: 30px;
 }
 
+.title-hrs{
+    text-align: center;
+    padding: 30px;
+}
 
-/*Formularios*/
+
+/*Formulario de contacto*/
 .content{
     max-width: 1170px;
     margin-left: auto;
@@ -182,7 +168,7 @@ footer{
 }
 
 .contact-wrapper{
-    box-shadow: 0 0 20px 0 #DF3447;
+    box-shadow: 0 0 20px 0 $color-principal;
 }
 
 .contact-wrapper > * {
@@ -202,12 +188,12 @@ footer{
     border: none;
     background: none;
     outline: 0;
-    color: white;
-    border-bottom: 1px solid #DF3447;
+    color: $color-secundario;
+    border-bottom: 1px solid $color-principal;
 }
 
 .contact-form form button{
-    background: #DF3447;
+    background: $color-principal;
     border: 0;
     text-transform: uppercase;
     padding: 1em;
@@ -229,7 +215,7 @@ footer{
 .table{
     text-align: center;
     width: 100%;
-    border: 3px solid #DF3447;
+    border: 3px solid $color-principal;
     border-collapse: collapse;
     margin: 0;
     padding: 0;
@@ -243,9 +229,9 @@ footer{
 }
 
 .table tr{
-    color: white;
-    background-color: black;
-    border: 2px solid #DF3447;
+    color: $color-secundario;
+    background-color: $color-terciario;
+    border: 2px solid $color-principal;
 }
 
 .tableo th, .table td{
@@ -255,15 +241,15 @@ footer{
 
 .table thead th{
     text-transform: uppercase;
-    background-color: #DF3447;
+    background-color: $color-principal;
 }
 
 .table tbody tr:hover{
-    background-color: #DF3447;
+    background-color: $color-principal;
 }
 
 .table tbody td:hover{
-    background-color: black;
+    background-color: $color-terciario;
 }
 
 .table-responsive{
@@ -295,7 +281,7 @@ footer{
         position: fixed;
         width: 100%;
         height: 100vh;
-        background: #DF3447;
+        background: $color-principal;
         top: 120px;
         left: -100%;
         text-align: center;
@@ -314,7 +300,7 @@ footer{
 
     li a:hover{
         background: none;
-        color: black;
+        color: $color-terciario;
     }
 
     #check:checked ~ ul{
@@ -334,3 +320,4 @@ footer{
     }
     
 }
+
