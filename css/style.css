@@ -87,7 +87,7 @@ main {
   justify-content: center; }
 
 /*configuracion de los titulos de wods*/
-.title-wod {
+.title-wod, .home-text {
   text-align: center;
   box-shadow: 0px 0px 16px 16px #DF3447; }
 
@@ -101,7 +101,6 @@ main {
 
 /*configuracion del titulo del home*/
 .home-text {
-  box-shadow: 0px 0px 16px 16px #DF3447;
   width: 850px;
   padding: 20px;
   text-align: center;
@@ -257,3 +256,6 @@ footer {
 
 .head-h3 {
   font-size: 15px; }
+
+.principal {
+  background-color: black; }

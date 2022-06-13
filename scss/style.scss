@@ -149,7 +149,7 @@ main{
 
 /*configuracion del titulo del home*/
 .home-text{
-    box-shadow: 0px 0px 16px 16px $color-principal;
+    @extend .title-wod;
     width: 850px;
     padding: 20px;
     text-align: center;
@@ -369,8 +369,10 @@ $headings: (
 
 
 // mixin
-@mixin size ($alto, $ancho) {
-    height: $alto;
-    width: $ancho;
+@mixin background {
+    background-color: black;
 }
 
+.principal{
+    @include background;
+}

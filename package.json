@@ -1,7 +1,7 @@
 {
   "name": "coder-desafios",
   "version": "1.0.0",
-  "description": "",
+  "description": "agregando sass II - mapas\r agregué SEO a todas las paginas - keywords, descriptions y favicon\r agregué las redes sociales al footer",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
